@@ -1,0 +1,74 @@
+@color: #42A5F5;
+.unselect() {
+  -moz-user-select: none;
+  -o-user-select:none;
+  -khtml-user-select:none;
+  -webkit-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+.boxWrap {
+  width: 38px;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  background: #FFFFFF;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16)
+}
+.chartWrap {
+  background: #FBFBFB;
+  .chart {
+    border: none;
+  }
+}
+.toolWrap {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  right: 30px;
+  .box {
+    .unselect();
+    .toolBtn {
+      .boxWrap;
+      margin-top: 10px;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: text-top;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #BDBDBD;
+      }
+      .errorBtn {
+        font-size: 16px;
+        font-weight: 700;
+        color: #faad14;
+      }
+    }
+    .zoomContent {
+      .boxWrap;
+      height: 90px;
+      padding: 10px 0;
+      p {
+        text-align: center;
+        font-size: 12px;
+        color: #BDBDBD;
+        i {
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        &:hover {
+          i {color: @color;}
+        }
+      }
+      .zoomText {
+        margin: 10px 0;
+      }
+    }
+  }
+}
